@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "trusttrade_2026_q1_example",
+  "release_scope": "example_not_exact_paper_manifest",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-02-19"
+  },
+  "symbols": ["AAPL", "GOOG", "NVDA"],
+  "portfolio": {
+    "initial_cash": 10000.0,
+    "commission": 0.0
+  },
+  "selected_analysts": ["price", "fundamentals", "market", "social", "news"],
+  "online_tools": false,
+  "enable_reflection": true,
+  "skip_analysts": false,
+  "llm": {
+    "provider": "openai",
+    "backend_url": "https://api.openai.com/v1",
+    "quick_model": "gpt-4o-mini",
+    "deep_model": "gpt-4o-mini",
+    "analyst_models": ["gpt-4o-mini", "gpt-4o-mini"],
+    "analyst_providers": ["openai", "openai"],
+    "credibility_scorer_model": "gpt-4o-mini",
+    "credibility_scorer_provider": "openai"
+  },
+  "max_debate_rounds": 1,
+  "output_dir": "results/2026_q1_example",
+  "notes": [
+    "The end date reflects the 2026-Q1 range encoded in the research branch.",
+    "Offline mode requires a separately prepared, time-bounded cache.",
+    "Authors must verify the final paper model snapshots and run matrix before a reproducibility tag."
+  ]
+}

@@ -1,0 +1,12 @@
+TrustTrade
+Copyright 2026 TrustTrade authors
+
+This product includes software derived from TradingAgents,
+https://github.com/TauricResearch/TradingAgents, distributed under the
+Apache License, Version 2.0.
+
+TrustTrade modifications include multi-agent credibility scoring,
+selective-consensus orchestration, deterministic temporal signals,
+portfolio-aware backtesting, and reflective short/long-term memory.
+
+See docs/UPSTREAM.md for provenance and citation information.

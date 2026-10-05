@@ -1,0 +1,104 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trusttrade"
+version = "0.1.0"
+description = "Human-inspired selective consensus for LLM trading agents"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+  {name = "Minghan Li"},
+  {name = "Rachel Gonsalves"},
+  {name = "Weiyue Li"},
+  {name = "Sunghoon Yoon"},
+  {name = "Mengyu Wang"},
+]
+keywords = ["multi-agent systems", "large language models", "finance", "trading", "consensus"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "akshare>=1.16.98",
+  "anthropic>=0.52",
+  "beautifulsoup4>=4.13",
+  "chromadb>=1.0.12",
+  "eodhd>=1.0.32",
+  "feedparser>=6.0.11",
+  "finnhub-python>=2.4.23",
+  "google-genai>=1.0,<2",
+  "langchain>=0.3.25,<0.4",
+  "langchain-core>=0.3.85,<0.4",
+  "langchain-anthropic>=0.3.15,<0.4",
+  "langchain-experimental>=0.3.4,<0.4",
+  "langchain-google-genai>=2.1.5,<3",
+  "langchain-openai>=0.3.23,<0.4",
+  "langchain-xai>=0.2,<0.3",
+  "langgraph>=0.4.8,<0.5",
+  "langgraph-checkpoint>=2.0.26,<3",
+  "langgraph-prebuilt>=0.2.2,<0.3",
+  "langgraph-sdk>=0.1.70,<0.2",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3",
+  "pandas-market-calendars>=5,<6",
+  "parsel>=1.10",
+  "praw>=7.8",
+  "openai>=1.104,<3",
+  "python-dateutil>=2.9",
+  "pytz>=2025.2",
+  "questionary>=2.1",
+  "requests>=2.32",
+  "rich>=14",
+  "stockstats>=0.6.5",
+  "tqdm>=4.67",
+  "tushare>=1.4.21",
+  "typing-extensions>=4.14",
+  "xai-sdk>=1.0",
+  "yfinance>=0.2.63",
+]
+
+[project.optional-dependencies]
+analysis = [
+  "backtesting>=0.6",
+  "bokeh>=3.7",
+  "matplotlib>=3.9",
+  "scipy>=1.14",
+  "seaborn>=0.13",
+  "TA-Lib>=0.6",
+]
+dev = [
+  "build>=1.2",
+  "pytest>=8.3",
+  "ruff>=0.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/Harvard-AI-and-Robotics-Lab/TradingAgent"
+Paper = "https://arxiv.org/abs/2603.22567"
+Issues = "https://github.com/Harvard-AI-and-Robotics-Lab/TradingAgent/issues"
+
+[project.scripts]
+trusttrade = "cli.main:app"
+
+[tool.setuptools.packages.find]
+include = ["tradingagents*", "cli*"]
+
+[tool.setuptools.package-data]
+cli = ["static/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+exclude = ["baseline_analysis"]

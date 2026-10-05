@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use TrustTrade, please cite the paper and the upstream TradingAgents framework."
+title: "TrustTrade: Human-Inspired Selective Consensus Reduces Decision Uncertainty in LLM Trading Agents"
+type: software
+version: 0.1.0
+date-released: 2026-10-04
+license: Apache-2.0
+repository-code: "https://github.com/Harvard-AI-and-Robotics-Lab/TradingAgent"
+authors:
+  - family-names: Li
+    given-names: Minghan
+  - family-names: Gonsalves
+    given-names: Rachel
+  - family-names: Li
+    given-names: Weiyue
+  - family-names: Yoon
+    given-names: Sunghoon
+  - family-names: Wang
+    given-names: Mengyu
+preferred-citation:
+  type: article
+  title: "TrustTrade: Human-Inspired Selective Consensus Reduces Decision Uncertainty in LLM Trading Agents"
+  authors:
+    - family-names: Li
+      given-names: Minghan
+    - family-names: Gonsalves
+      given-names: Rachel
+    - family-names: Li
+      given-names: Weiyue
+    - family-names: Yoon
+      given-names: Sunghoon
+    - family-names: Wang
+      given-names: Mengyu
+  year: 2026
+  doi: 10.48550/arXiv.2603.22567
+  url: "https://arxiv.org/abs/2603.22567"

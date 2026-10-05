@@ -1,0 +1,28 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Generated runs and provider-controlled caches.
+results/
+outputs/
+!tools/plot_consensus/outputs/
+!tools/plot_consensus/outputs/*.svg
+logs/
+baseline_analysis/results/
+tradingagents/dataflows/data_cache/
+data/raw/
+data/private/
+
+# Notebooks are excluded from the public release because outputs can retain
+# credentials, prompts and person-level records.
+*.ipynb

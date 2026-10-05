@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "providers": {
+    "openai": {
+      "api_key_env": "OPENAI_API_KEY",
+      "base_url": "https://api.openai.com/v1",
+      "example_models": ["gpt-4o-mini", "gpt-4o", "gpt-5-mini", "gpt-5"]
+    },
+    "anthropic": {
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "example_models": ["claude-haiku-4-5-20251001"]
+    },
+    "google": {
+      "api_key_env": "GOOGLE_API_KEY",
+      "example_models": ["gemini-2.5-flash-lite"]
+    },
+    "xai": {
+      "api_key_env": "XAI_API_KEY",
+      "example_models": ["grok-4-fast-reasoning"]
+    }
+  },
+  "financial_data": {
+    "finnhub_api_key_env": "FINNHUB_API_KEY"
+  },
+  "notes": [
+    "This file contains environment-variable names only, never credentials.",
+    "Model identifiers are examples and may change or become unavailable.",
+    "Record exact provider snapshots in a run manifest for paper reproduction."
+  ]
+}
